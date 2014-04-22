@@ -25,9 +25,9 @@ import os,sys
 import struct
 frame=wx.Frame
 
-class EasyTalk(frame):
+class PyChat(frame):
     def __init__(self,parent,id):
-        wx.Frame.__init__(self,parent,id,title="EasyTalk",size=(550,430),pos=(500,100),style=wx.SYSTEM_MENU | wx.CAPTION|wx.CLOSE_BOX|wx.MINIMIZE_BOX  ,name=wx.FrameNameStr)
+        wx.Frame.__init__(self,parent,id,title="PyChat",size=(550,430),pos=(500,100),style=wx.SYSTEM_MENU | wx.CAPTION|wx.CLOSE_BOX|wx.MINIMIZE_BOX  ,name=wx.FrameNameStr)
         self.panel=wx.Panel(self)
         self.style=wx.MINIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX
         
@@ -47,7 +47,7 @@ class EasyTalk(frame):
         
         self.statictext=wx.StaticText(self.panel,-1,"Client IP: ",(20,90))
         self.statictext1=wx.StaticText(self.panel,-1,"Server IP: ",(20,55))
-        self.statictext2=wx.StaticText(self.panel,-1,"EasyTalk",(150,0))
+        self.statictext2=wx.StaticText(self.panel,-1,"PyChat",(150,0))
 
         self.statictext.SetFont(self.font)
         self.statictext1.SetFont(self.font)
@@ -131,7 +131,7 @@ class EasyTalk(frame):
 
 if __name__ =='__main__':
     app=wx.PySimpleApp()
-    frame=EasyTalk(parent=None,id=-1)
+    frame=PyChat(parent=None,id=-1)
     frame.Show()
     app.MainLoop()
 
